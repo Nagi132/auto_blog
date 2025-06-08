@@ -1,0 +1,13 @@
+requests
+beautifulsoup4
+transformers
+torch
+playwright
+playwright-stealth
+lxml
+python-dotenv
+sentence-transformers
+scikit-learn
+hdbscan
+sentencepiece
+bertopic

@@ -1,0 +1,1352 @@
+@charset "utf-8";
+@import url(https://parts.blog.livedoor.jp/css/template_6thgen.css);
+@import url(https://blogroll.livedoor.net/css/default2.css);
+/**
+@prefix : <http://purl.org/net/ns/doas#> .
+<> a :CSSStylesheet;
+ :title "matomegray";
+ :shortdesc "Template for livedoor Blog";
+ :created "2013-01-31";
+ :release [:revision "1.01"; :created "2013-02-15"];
+ :page <http://blogdesign.ldblog.jp/archives/22919574.html>;
+ :rights "LINE Corporation".
+*/
+
+
+body{
+	background: #f8f9fa; /* Light, neutral background */
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif stack */
+	color: #343a40; /* Slightly softer black */
+}
+
+/* かんたん背景画像 */
+body.show-bg-image {
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+/* -----------------------------------------------
+ヘッダー
+----------------------------------------------- */
+
+/* ヘッダー タイトル,画像部分
+----------------------------------------------- */
+#blog-header01 .header-inner01{
+	position: relative;
+	margin: 0 auto;
+	width: 1168px;
+	height: 295px;
+	background: url(https://parts.blog.livedoor.jp/img/usr/ver06_km_matomegray_3c/header.png) no-repeat top ;
+}
+
+#blog-header01 .header-inner01.show-image{
+	height: auto;
+}
+
+
+.header-inner01 hgroup{
+	position: absolute;
+	display: block;
+	overflow: hidden;
+	margin: 15px 0 0 20px;
+	width: 600px;
+	height: 215px;
+}
+
+.header-inner01 hgroup h1{
+	width: 600px;
+	text-shadow: 0 1px 6px #000000;
+	-ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(color=#000000,offx=1,offy=3)";
+	display:block;
+}
+
+.header-inner01 hgroup h1 a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 1.2;
+}
+
+.header-inner01 hgroup h2{
+	margin: 10px 0 0 3px;
+	width: 600px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 1.3;
+	text-shadow: 0 1px 3px #000000;
+	-ms-filter:"progid:DXImageTransform.Microsoft.DropShadow(color=#000000,offx=1,offy=1)";
+}
+
+
+/* かんたんタイトル画像
+----------------------------------------------- */
+.header-inner01.show-image img#blog-header-image{
+	width: 100%;
+}
+
+.header-inner01.hide-text hgroup{
+	display: none;
+}
+.header-inner01.show-image.hide-text{
+	background: none !important;
+}
+.header-inner01.show-image.hide-text img:hover{
+	opacity: 0.8;
+}
+
+/* ヘッダー　グレー部分
+----------------------------------------------- */
+#blog-header02{
+	position: absolute;
+	bottom: 0;
+	/* *left: 0; REMOVED IE Hack */
+}
+
+#blog-header02 .header-inner02{
+	margin: 0 auto;
+	width: 1168px;
+	/* Applying Flexbox Fix */
+	display: flex;
+	align-items: center; /* Vertically align items */
+	justify-content: space-between; /* Puts space between menu and search */
+	/* Original background/filter */
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#33333333,EndColorStr=#33333333);
+	background-color: #555555; /* Fallback */
+	background: rgba(0,0,0,0.7);
+	zoom: 1; /* For IE clearfix compatibility */
+}
+
+#blog-header02 .header-inner02:after {
+	 display: block;
+	 visibility: hidden;
+	 clear: both; /* Still useful even with flex for potential internal floats */
+	 height: 0;
+	 content: ".";
+}
+
+
+/* ヘッダー　ナビ部分
+----------------------------------------------- */
+.header-inner02 ul.header-menu{
+	/* float: left; REMOVED for Flexbox */
+	/* width: 730px; REMOVED for Flexbox */
+	width: auto; /* Flex determines width */
+	margin: 0; /* Reset margins */
+	padding: 0; /* Reset padding */
+	border-left: none; /* Remove original left border */
+}
+
+ul.header-menu li{
+	float: left;
+	border: none; /* Remove all old borders */
+	margin: 0 2px; /* Add slight horizontal spacing */
+	color: #ffffff;
+	list-style: none;
+	font-size: 16px;
+	font-weight: 500;
+	transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+ul.header-menu li a{
+	display: block;
+	padding: 0 22px;
+	height: 51px;
+	border-right: 1px solid #000000;
+	color: #ffffff;
+	text-decoration: none;
+	line-height: 51px;
+}
+
+ul.header-menu li:first-child a{
+	border-left: 1px solid #6c6c6c;
+}
+
+ul.header-menu li a:hover{
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0,StartColorStr=#11111111,EndColorStr=#11111111);
+	background-color: #111111;
+	background: rgba(0,0,0,0.8);
+}
+
+
+/* ヘッダー　Twitter,RSS,検索窓
+----------------------------------------------- */
+.header-sarch{
+	/* float: right; REMOVED for Flexbox */
+	/* width: 420px; REMOVED for Flexbox */
+	width: auto; /* Flex determines width */
+	margin: 0; /* Reset margins */
+	padding: 0; /* Reset padding */
+	/* Adjust vertical alignment and spacing */
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-right: 15px; /* Restore original right margin */
+}
+
+.header-sarch img{
+	margin-top: -2px;
+}
+
+.header-sarch img:hover{
+	opacity: 0.6;
+}
+
+.header-sarch li{
+	float: left;
+	margin-left: 20px;
+	list-style: none;
+}
+
+
+/* 検索 */
+.header-sarch input.sf {
+	background: url(https://parts.blog.livedoor.jp/img/usr/default_2012/common/icons.png) 0 0 no-repeat;
+}
+
+.header-sarch input.sf,
+.header-sarch input.sfbtn {
+	outline: 0;
+	border: 1px solid #aaa;
+}
+
+.header-sarch input.sf {
+	display: block;
+	float: left;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+	margin: 0 auto;
+	padding: 0 5px 0 21px;
+	width: 225px;
+	height: 20px;
+	border-radius: 10px 0 0 10px;
+	background-color: #fff;
+	background-position: 5px -264px;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.2);
+	vertical-align: top;
+	/* *width: 180px; REMOVED IE Hack */
+}
+
+.header-sarch input.sfbtn {
+	float: right;
+	width: 75px;
+	height: 20px;
+	border-left: 0;
+	border-radius: 0 10px 10px 0;
+	background: #f1f1f1;
+	background: -webkit-linear-gradient(top,#fefefe 0%,#f1f1f1 100%);
+	background:    -moz-linear-gradient(top,#fefefe 0%,#f1f1f1 100%);
+	background:     -ms-linear-gradient(top,#fefefe 0%,#f1f1f1 100%);
+	background:      -o-linear-gradient(top,#fefefe 0%,#f1f1f1 100%);
+	background:         linear-gradient(top,#fefefe 0%,#f1f1f1 100%);
+	text-shadow: 0 1px 0 #fff;
+	font-size: 12px;
+	-webkit-transition: color 0.2s ease;
+	   -moz-transition: color 0.2s ease;
+	    -ms-transition: color 0.2s ease;
+	     -o-transition: color 0.2s ease;
+	        transition: color 0.2s ease;
+}
+
+.header-sarch input.sfbtn:hover,
+.header-sarch input.sfbtn:focus {
+	color: #2e90c5;
+}
+
+
+/* -----------------------------------------------
+コンテンツ
+----------------------------------------------- */
+#wrapper{
+}
+
+
+/* コンテンツのカラム幅
+----------------------------------------------- */
+
+/* コンテンツ全体 */
+#container{
+	position: relative;
+	margin: 0 auto;
+	padding: 1px 0 30px;
+	width: 1168px;
+	background: #fff;
+}
+
+.left-container,
+.main-container,
+.right-container{
+	overflow: hidden;
+}
+
+/* コンテンツ　中央メインのカラム */
+.main-container{
+	display: inline;
+	float: left;
+	width: 100%;
+}
+
+.main-column-inner{
+	margin: 0 220px;
+}
+
+/* コンテンツ　左側のカラム */
+.left-container{
+	display: inline;
+	float: left;
+	margin-left: -100%;
+	width: 210px;
+}
+.left-column-inner{
+	margin-left: 10px;
+}
+
+/* コンテンツ　右側のカラム */
+.right-container{
+	display: inline;
+	float: left;
+	margin-left: -210px;
+	width: 200px;
+}
+.right-column-inner{
+	margin-right: 0px;
+}
+
+.left-container:after,
+.right-container:after {
+	display: block;
+	visibility: hidden;
+	content: ".";
+}
+
+
+/* 画像付きRTorコメントリスト
+----------------------------------------------- */
+.listWithImage{
+	margin-left: 0px;
+}
+
+.listWithImage li{
+	margin-bottom: 0 !important;
+}
+
+.listWithImage li:hover{
+	opacity: 0.6;
+}
+
+div.popularArticlesWithImage.A{
+	margin: 0 ;
+}
+
+div.popularArticlesWithImage.A ul{
+	margin: 0 0 10px;
+}
+
+div.popularArticlesWithImage.A ul li{
+	/*border: 1px solid #000000;*/
+}
+
+div.popularArticlesWithImage.A ul li a{
+/*	border: 2px solid #000000 !important;*/
+}
+
+div.popularArticlesWithImage.A div.title{
+	padding: 5px 4px 0 4px;
+	/*color: #ffffff !important;*/
+}
+
+.side div.popularArticlesWithImage.A div.title{
+	padding: 6px 4px;
+	/* font-size:11px; */
+}
+
+div.popularArticlesWithImage.A div.retweet, div.popularArticlesWithImage.A div.comment{
+	padding: 3px 6px 0 5px;
+	/*background: #000000 !important;*/
+	/*text-shadow: none !important;*/
+}
+
+
+
+
+/* BlogRoll
+----------------------------------------------- */
+/*全体の設定*/
+.rss-blogroll:after{
+     display: block;
+     visibility: hidden;
+     clear: both;
+     height: 0;
+     content: ".";
+}
+
+.rss-blogroll{
+	margin: 10px 0;
+	padding: 3px 0;
+	border: 2px solid #b0b0b0;
+    zoom: 100%;
+}
+
+/*チャンネル単位の設定*/
+.rss-blogroll .blogroll-channel{
+	float: left;
+	overflow: auto;
+	margin-bottom: 0;
+	margin-left: 5px;
+	padding: 0;
+	width: 383px !important;
+	height: 180px !important;
+	font-size: 12px;
+}
+
+/*リストの設定*/
+.rss-blogroll .blogroll-channel .blogroll-list {
+	padding: 3px 0;
+	padding-top: 0;
+	border-bottom: 1px dashed #c2c2c2;
+	list-style-type: none;
+	font-size: 14px;
+	line-height: 1.3;
+}
+
+/*テキスト部分の設定*/
+.rss-blogroll .blogroll-channel .blogroll-list a{
+	padding-left: 5px;
+	color: #898989;
+	text-decoration: none;
+}
+
+.rss-blogroll .blogroll-channel .blogroll-list a:hover{
+	text-decoration: underline;
+}
+
+/*NEWの文字の設定*/
+.rss-blogroll .blogroll-new-entry{
+	color: #ff0a00;
+	font-weight: bold;
+	font-size: 11px;
+}
+
+/*
+      BlogRoll css 2 - Original text commented out
+*/
+/* ----------------------------------------------- */
+
+.blogroll-channel {
+    width: 500px;
+    height: auto;
+    border: 1px solid #696969;
+    margin-bottom: 15px;
+    padding: 10px;
+    text-align: left; /* Moved from * selector */
+}
+
+.blogroll-channel .blogroll-list-wrap {
+    margin-bottom: 10px;
+}
+
+.blogroll-channel .blogroll-list {
+    list-style-type: none;
+    margin-bottom: 3px;
+    font-size: 12px;
+    line-height: 1.3;
+}
+
+.blogroll-channel .blogroll-list img {
+    vertical-align: middle;
+}
+
+.blogroll-channel img.blogroll-icon,
+.blogroll-channel img.blogroll-favicon {
+    margin: 0 5px 0 0;
+}
+
+.blogroll-channel img.blogroll-favicon {
+	width: 16px;
+	height: 16px;
+}
+
+.blogroll-channel a.blogroll-link {
+}
+
+.blogroll-channel .blogroll-new-entry {
+    margin-left: 5px;
+    color: red;
+}
+
+.blogroll-channel .blogroll-clip,
+.blogroll-channel .blogroll-hatebu {
+    margin: 0 0 0 5px;
+}
+
+.blogroll-channel .blogroll-link-time {
+    margin: 0 0 0 3px;
+    color: #666;
+    font-size: 10px;
+}
+
+.blogroll-channel .blogroll-ad-img {
+}
+
+.blogroll-channel .blogroll-ad-text {
+    display: block;
+    margin-top: 5px;
+    color: #666;
+    font-size: 12px;
+}
+/* ▼　相互RSS ▼ */
+.blogroll-wrapper{
+	width:100%;
+	overflow:hidden;
+}
+.blogroll-column{
+	float:left;
+	width:50%;
+}
+
+
+/* BlogRoll
+----------------------------------------------- */
+/*広告*/
+.main-container-ads{
+	margin-bottom: 10px;
+}
+
+
+/* メッセージボード
+----------------------------------------------- */
+.message-board-outer{
+	margin-bottom: 10px !important;
+	padding: 10px;
+	border: 3px solid #484848;
+	background: #eaeaea;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+.message-board-outer a{
+	text-decoration: none;
+}
+
+.message-board-outer a:hover{
+	text-decoration: underline;
+}
+
+
+/* 記事タイトル
+----------------------------------------------- */
+.article-title{
+	padding: 15px;
+	border-top: 1px solid #555;
+	background: #484848; /* Old browsers */
+	background: -moz-linear-gradient(top,  #484848 0%, #121212 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#484848), color-stop(100%,#121212)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #484848 0%,#121212 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #484848 0%,#121212 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #484848 0%,#121212 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #484848 0%,#121212 100%); /* W3C */
+	color: #fff;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 1.2;
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#121212',GradientType=0 ); /* IE6-9 */
+}
+
+.article-title a{
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.article-title a:hover{
+	text-decoration: underline;
+}
+
+
+/* 記事タイトル下の記事情報
+----------------------------------------------- */
+.article-header-inner:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	content: ".";
+}
+
+.article-header-inner {
+	margin-bottom: 15px;
+	padding: 13px 5px;
+	background: #eaeaea;
+	zoom: 100%;
+}
+
+/*投稿時間 カテゴリー 部分*/
+.article-header-top:after {
+     display: block;
+     visibility: hidden;
+     clear: both;
+     height: 0;
+     content: ".";
+}
+
+.article-header-top {
+     zoom: 100%;
+}
+
+/*投稿時間 - 記事タイトル下の記事情報*/
+.article-header-date{
+	float: left;
+	margin: 4px 10px 5px 0;
+	padding-left: 18px;
+	background: url(https://parts.blog.livedoor.jp/img/usr/ver06_km_matomegray_3c/icon_date.png) no-repeat left 50%;
+	font-size: 12px;
+	line-height: 1.3;
+}
+
+/*カテゴリー - 記事タイトル下の記事情報*/
+.article-header-category{
+	float: left;
+	margin: 4px 10px 5px 0;
+	padding-left: 16px;
+	background: url(https://parts.blog.livedoor.jp/img/usr/ver06_km_matomegray_3c/icon_category.png) no-repeat left 50%;
+	font-size: 12px;
+	line-height: 1.3;
+}
+
+.article-header-category li{
+	list-style: none;
+	/* *height:14px; REMOVED IE Hack */
+}
+
+.article-header-category dt{
+	display: none;
+}
+
+.article-header-category dd{
+	float: left;
+	padding: 0 5px;
+}
+
+.article-header-category dd a {
+	color: #333;
+	text-decoration: none;
+}
+
+.article-header-category dd a:hover{
+	text-decoration: underline;
+}
+
+/*記事の評価アイコン*/
+.article-rating img{
+	vertical-align: middle;
+}
+
+/*ソーシャルボタン - 記事タイトル下の記事情報*/
+.article-social-btn{
+}
+
+
+/* 記事本文
+----------------------------------------------- */
+.article-body{
+	margin-bottom: 40px;
+	padding: 0 20px;
+}
+
+.article-body a{
+	color: #0033cc;
+	text-decoration:none;
+}
+
+.article-body a:hover{
+	text-decoration: underline;
+}
+
+.article-body a:visited{
+	color: #b67448;
+}
+
+/*引用*/
+.article-body-inner blockquote{
+	padding: 15px;
+	background: #efefef;
+}
+.article-body-inner blockquote:before{
+	display: none;
+}
+
+/*続きを読む*/
+.article-body-continue{
+	display: block;
+	margin: 30px 0 0;
+	padding: 17px 22px;
+	background: #eaeaea;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 1.4;
+}
+
+
+
+/* 記事下の記事情報　（個別記事ページのみ）
+----------------------------------------------- */
+.article-footer:after {
+	display: block;
+	visibility: hidden;
+	clear: both;
+	height: 0;
+	content: ".";
+}
+
+.article-footer {
+	margin-bottom: 40px;
+	padding: 10px;
+	background: #efefef;
+	color: #333333;
+	zoom: 100%;
+}
+
+
+/* コメント - 記事下の記事情報
+----------------------------------------------- */
+.article-footer .article-footer-comment{
+	float: left;
+	margin: 4px 10px 5px 0;
+	padding-left: 18px;
+	background: url(https://parts.blog.livedoor.jp/img/usr/ver06_km_matomegray_3c/icon_comment.png) no-repeat left 50%;
+	font-size: 12px;
+	line-height: 1.3;
+}
+
+.article-footer .article-footer-comment a{
+	color: #333;
+	text-decoration: none;
+}
+
+.article-footer .article-footer-comment a:hover{
+	text-decoration: underline;
+}
+
+
+/* ソーシャルボタン - 記事下の記事情報
+----------------------------------------------- */
+.article-footer .article-social-btn{
+	float: right;
+}
+
+
+
+/* サブリスト2種
+　　カテゴリの最新記事　article-sub-category related-articles
+　　人気記事ランキング article-sub-popular
+----------------------------------------------- */
+
+/*サブリストの共通タイトル*/
+.article-sub-category h3 ,
+.article-sub-popular h3 {
+	margin-bottom: 15px;
+	padding-left: 10px;
+	border-left: 5px solid #000000;
+	color: #333333;
+	font-weight: bold;
+	font-size: 24px;
+}
+
+/*カテゴリの最新記事 , 人気記事ランキング */
+.related-articles,
+.article-sub-popular {
+	padding-bottom: 20px;
+}
+
+/*文字の装飾 - カテゴリの最新記事 , 人気記事ランキング*/
+.article-sub-category a,
+.article-sub-popular a{
+	text-decoration: none;
+}
+
+.article-sub-category a:hover,
+.article-sub-popular a:hover{
+	text-decoration: underline;
+}
+
+.article-sub-category a:visited,
+.article-sub-popular a:visited{
+}
+
+/*カテゴリの最新記事*/
+.article-sub-category ul{
+	padding-left: 18px;
+}
+
+.article-sub-category li{
+	padding: 0 0 5px 18px;
+	background: url(https://parts.blog.livedoor.jp/img/usr/ver06_km_matomegray_3c/icon_list.png) no-repeat left 4px;
+	list-style: none;
+}
+
+/*人気記事ランキング*/
+.article-sub-popular .popularArticlesWithImage.A ul{
+	text-align: left;
+}
+
+
+
+
+/* コメント　トラックバック
+----------------------------------------------- */
+.article-option-title{
+	margin-bottom: 15px;
+	padding: 10px 0 10px 10px;
+	border-left: 5px solid #000000;
+	background: #efefef;
+	color: #333333;
+	font-size: 16px;
+}
+
+#comments ol,
+#trackbacks ol{
+	margin-bottom: 40px;
+	padding-left: 18px;
+}
+
+/*コメントのセット,トラックバックのセット*/
+.comment-set{
+	padding: 0;
+	border-top: 1px dashed #cccccc;
+	color: #333333;
+	list-style: none;
+	font-size: 12px;
+}
+#trackbacks .comment-set{
+	padding: 10px 0;
+}
+
+.comment-set:first-child{
+	border-top: none;
+}
+
+.comment-info, .trackback-set {
+	margin: 10px 0;
+}
+
+/*コメントの番号,トラックバックの番号*/
+.comment-number{
+	margin-right: 10px;
+}
+
+/*コメント主の名前,トラックバックのブログタイトル*/
+.comment-author{
+	margin-right: 10px;
+	font-weight: normal;
+}
+
+.comment-author a{
+	color: #0033cc;
+	text-decoration: none;
+}
+
+.comment-author a:hover{
+	color: #0033cc;
+}
+
+
+/*コメントの日時とID,トラックバックの日時*/
+.comment-date{
+	color: #666666;
+}
+
+.comment-body{
+	padding-bottom: 0;
+	color: #333333;
+	font-size: 16px;
+}
+
+
+/*トラックバックの記事*/
+.comment-url a{
+	color: #0033cc;
+}
+
+
+/* コメントフォーム
+----------------------------------------------- */
+.comment-form-title{
+	font-weight: bold;
+}
+
+#comment-form{
+	margin-top: 5px;
+	padding: 20px 0;
+	background: #efefef;
+}
+
+/*コメント入力欄*/
+#comment-form textarea{
+	resize: vertical;
+}
+
+
+
+
+/* -----------------------------------------------
+ナビゲーション
+参考URL：http://wiki.livedoor.jp/staff/d/DesignTemplate/Navigation
+----------------------------------------------- */
+
+/* トップページ　カテーゴリーアーカイブ　月別アーカイブ
+----------------------------------------------- */
+
+/*ナビゲーション共通*/
+.pager{
+	padding:0 0 0 0;
+	background: none;
+	font-size: 14px;
+}
+
+ul.index-navigator{
+	margin: 0 0 7px !important;
+}
+
+li.paging-prev{
+	margin: 0 5px !important;
+}
+
+li.paging-prev a,
+li.paging-next a,
+.index-navigator .paging-first a,
+.index-navigator .paging-last a,
+li.paging-number ol.paging-number li a{
+	display: inline-block;
+	/* *display: inline; REMOVED IE Hack */
+	/* *zoom: 1; REMOVED IE Hack */
+	padding: 0 12px !important;
+	height: 32px;
+	/* border: 1px solid #d5d5d5; */
+	background: #999;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold !important;
+	line-height: 32px !important;
+}
+
+li.paging-next{
+	margin: 0 5px !important;
+}
+
+li.paging-prev a:hover,
+li.paging-next a:hover,
+.index-navigator .paging-first a:hover,
+.index-navigator .paging-last a:hover,
+li.paging-number ol.paging-number li a:hover,
+li.paging-number ol.paging-number li.current{
+	display: inline-block;
+	/* *display: inline; REMOVED IE Hack */
+	/* *zoom: 1; REMOVED IE Hack */
+	padding: 0 12px;
+	height: 32px;
+	/* border: 1px solid #838383; */
+	background: #484848;
+	color: #ffffff;
+	font-weight: bold;
+	line-height: 32px;
+}
+
+li.paging-number ol.paging-number li.current{
+	padding: 0 0;
+}
+
+ul.index-navigator li a,
+ul.index-navigator li.current{
+	margin: 0 3px !important;
+	height: 32px !important;
+	line-height: 32px !important;
+	/* *line-height: 30px; REMOVED IE Hack */
+	/* *height: 30px; REMOVED IE Hack */
+}
+
+ul.index-navigator li.current span{
+	/* *line-height:33px !important; REMOVED IE Hack */
+}
+
+
+
+/* 個別記事ページ
+----------------------------------------------- */
+
+/*ナビゲーション全体*/
+.article-pager-type2 ul.article-pager,
+.article-pager-type2 ul.archives-pager{
+	padding: 0 0 0 0;
+}
+
+.article-pager-type2 ul.article-pager li,
+.article-pager-type2 ul.archives-pager li{
+	margin: 0;
+}
+
+/*前の記事へ*/
+.article-pager-type2 .article-pager .prev{
+	float: left;
+	padding-left: 20px;
+	width: 300px;
+	background: url(https://parts.blog.livedoor.jp/img/usr/ver06_km_matomegray_3c/icon_prev.png) no-repeat left 6px;
+	text-align: left;
+	text-indent: -7px;
+	word-wrap: break-word;
+}
+
+/*次の記事へ*/
+.article-pager-type2 .article-pager .next{
+	float: right;
+	padding-right: 10px;
+	width: 300px;
+	background: url(https://parts.blog.livedoor.jp/img/usr/ver06_km_matomegray_3c/icon_next.png) no-repeat right 6px;
+	text-align: right;
+	word-wrap: break-word;
+}
+
+/*文字について*/
+.article-pager-type2 ul.article-pager li a,
+.article-pager-type2 ul.archives-pager li a{
+	display: block;
+	padding: 0 ;
+	width: 300px;
+	color: #666666;
+	word-wrap: break-word;
+	font-weight: bold;
+	font-size: 16px;
+}
+
+/*マウスオーバーについて*/
+.article-pager-type2 ul.article-pager li a:hover,
+.article-pager-type2 ul.archives-pager li a:hover {
+	background: none !important;
+	text-decoration: underline;
+}
+
+
+
+
+/* カテゴリーアーカイブ,月別アーカイブ
+----------------------------------------------- */
+
+/*アーカイブのタイトルの全体設定*/
+.archives-header{
+	margin-bottom: 10px;
+	padding: 10px;
+	background: #ededed;
+	color: #333333;
+}
+
+/*アーカイブのタイトル*/
+.archives-header h1{
+	margin: 0 auto;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+
+
+/* -----------------------------------------------
+サイド
+----------------------------------------------- */
+
+/* サイドカラム共通設定
+----------------------------------------------- */
+.sidewrapper{
+    margin-bottom: 10px;
+    border-right: 1px solid #333;
+    border-bottom: 1px solid #333;
+    border-left: 1px solid #333;
+    font-size: 14px;
+}
+
+.side{
+	padding: 0 10px 0 10px;
+}
+
+/*サイドカラムのリンク色*/
+.sidewrapper a{
+	color: #0030ff;
+	text-decoration: none;
+}
+.sidewrapper a:hover{
+	text-decoration: underline;
+}
+.sidewrapper a:visited{
+	color: #7f4bc0;
+}
+
+
+/* plugin全体への設定 */
+.side:after {
+     display: block;
+     visibility: hidden;
+     clear: both;
+     height: 0;
+     content: ".";
+}
+
+.side {
+	margin: 10px 0;
+	zoom: 100%;
+}
+
+
+/*サイドカラムのタイトル*/
+.sidetitlebody{
+	padding: 5px 10px;
+	background: #484848;
+	color: #ffffff;
+}
+
+.sidetitle a{
+    color: #ffffff ;
+}
+
+.sidetitle a:visited{
+    color: #ffffff ;
+}
+
+
+/*サイドカラムのリスト*/
+.sidebody{
+	margin: 10px 0 0;
+	padding: 10px 0 0;
+	border-top: 1px solid #e5e5e5;
+	line-height: 1.2;
+}
+
+.sidebody:first-child{
+	margin-top: 0;
+	padding-top: 0;
+	border-top: none;
+}
+
+.sidebody.category-child {
+	padding: 10px 0 0 13px;
+}
+
+
+/* 最新記事(画像付)
+----------------------------------------------- */
+.plugin-recent_articles_image{
+	font-size: 13px;
+	line-height: 1.2;
+}
+
+
+/* ギャラリー
+----------------------------------------------- */
+/*サムネイルのサイズは54pxにすると表示件数ヨコ3件にちょうどよいです。*/
+
+/*ギャラリー*/
+.plugin-recent_images .side{
+	margin-bottom: 3px;
+}
+
+/* カレンダー
+----------------------------------------------- */
+/*カレンダー共通設定*/
+.plugin-calendar_default{
+	margin: 0 0 20px 0;
+	font-size: 14px;
+}
+
+/*カレンダー年月*/
+.calendarheadbody{
+	padding: 5px 10px;
+	background: #484848;
+	color: #ffffff;
+	font-size: 14px;
+}
+
+.calendarheadbody a{
+	color: #ffffff;
+}
+
+.calendarheadbody a:visited{
+	color: #ffffff;
+}
+
+/*カレンダーの体裁*/
+.plugin-calendar_default table,
+.plugin-calendar_japanese table{
+	border-spacing: 1px;
+	border-collapse: separate;
+}
+
+.calbody{
+	color: #8d8d8d;
+}
+
+table.caltblday td{
+	border: 1px solid #eeeeee;
+}
+
+/*リンク背景*/
+table.caltblday td a{
+	background: #333333;
+	color: #ffffff;
+}
+
+table.caltblday td a:hover{
+	text-decoration: underline;
+}
+
+/*曜日*/
+.sun{
+	color: #ff5d59;
+	font-weight: bold;
+}
+
+.sat{
+	color: #4e8cff;
+	font-weight: bold;
+}
+
+.weekday{
+	font-weight: bold;
+}
+
+
+/* 人気記事（画像付）
+----------------------------------------------- */
+.plugin-popular_articles_with_image li:hover{
+	opacity: 0.6;
+}
+
+div.popularArticlesWithImage.B:hover a,
+div.popularArticlesWithImage.C:hover a{
+	text-decoration: none !important;
+}
+
+.listWithImage .plugin-popular_articles_with_image .title{
+	background: #EBEBEB !important;
+	color: #333333 !important;
+	line-height: 1.1 !important;
+}
+
+div.popularArticlesWithImage.B div.comment,
+div.popularArticlesWithImage.B div.retweet,
+div.popularArticlesWithImage.C div.comment,
+div.popularArticlesWithImage.C div.retweet{
+	display: inline !important;
+	text-shadow: none !important;
+}
+
+div.popularArticlesWithImage.B div.title{
+	margin: 7px 0 0 10px;
+	background: none !important;
+}
+
+div.popularArticlesWithImage.C div.title{
+	margin: 4px 0 10px 0;
+	background: none !important;
+}
+
+/*4つ以上の場合*/
+.listWithImage.many li{
+	margin-bottom: 10px !important;
+}
+
+
+/* -----------------------------------------------
+フッター
+----------------------------------------------- */
+
+/*フッターの全体設定*/
+#blog-footer{
+	margin-top: 30px;
+	height: 80px;
+	background: #484848; /* Old browsers */
+	background: -moz-linear-gradient(top,  #484848 0%, #121212 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#484848), color-stop(100%,#121212)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #484848 0%,#121212 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #484848 0%,#121212 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #484848 0%,#121212 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #484848 0%,#121212 100%); /* W3C */
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#484848', endColorstr='#121212',GradientType=0 ); /* IE6-9 */
+}
+
+
+/*フッターのコピーライト部分*/
+#blog-footer #footer{
+	height: 80px;
+	color: #fff;
+	line-height: 80px;
+}
+
+#blog-footer #footer a{
+	color: #fff;
+}
+
+
+/*トップへ戻る*/
+.to-pagetop {
+	position: absolute;
+	right: -5px;
+	bottom: -105px;
+}
+
+
+
+
+/* -----------------------------------------------
+リセット　他のCSSが影響している場合にここでリセットします
+----------------------------------------------- */
+
+/* reset for template_6thgen.css
+----------------------------------------------- */
+body.layout-2col .message-board{
+	margin-top: 0;
+}
+
+
+/* reset for template.css
+----------------------------------------------- */
+.article-social-btn > a, .article-social-btn > span, .article-social-btn > div, .article-social-btn > iframe{
+	margin: 0 ;
+}
+
+.sidewrapper .blogroll-channel{
+	margin-bottom: 10px;
+	padding: 3px 0;
+	border: 1px solid #b0b0b0;
+}
+
+.sidewrapper .blogroll-channel .blogroll-list{
+	padding: 5px !important;
+	padding: 3px 0;
+	padding-top: 0;
+	border-bottom: 1px dashed #c2c2c2;
+	list-style-type: none;
+	font-size: 13px;
+	line-height: 1.3;
+}
+/* ----------------------------------------------- */
+/*
+#mypopup {
+display: none;
+position: absolute;
+border:1px solid #bbb;
+padding:5px 8px 8px;
+font-size:12px;
+color:#111;
+background-color:#ffc;
+list-style-type:none;
+line-height:1.2;
+text-align:left;
+max-width:750px;
+min-width:250px;
+box-shadow: 3px 3px 3px #ccc;
+-moz-box-shadow: 3px 3px 3px #ccc;
+-webkit-box-shadow: 3px 3px 3px #ccc;
+}
+
+#mypopup li.comment-date, #mypopup li.comment-author{
+display: inline;
+color:#666;
+}

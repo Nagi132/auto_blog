@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" xmlns:og="http://ogp.me/ns#">
+<head>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-1734000920269755",
+          enable_page_level_ads: true
+     });
+</script>
+<script type="text/javascript"> 
+<!--
+function rep(){
+ var all = document.getElementById('comments');
+ all.innerHTML=all.innerHTML.replace(/[０-９]/g, function(obj){return String.fromCharCode(obj.charCodeAt(0)-65248);});
+ all.innerHTML=all.innerHTML.replace(/(※|米|&gt;&gt;)(\d+)/g,"<a href=\"javascript:void(0)\" onMouseOver=\"opentext('$2', arguments[0])\" onMouseOut=\"popoff()\">$1$2</a>");
+}
+
+function opentext(res,evt){
+ var obj;
+ var objPopup = document.getElementById('mypopup');
+
+ var all = document.getElementById('comments');
+ var list = all.getElementsByTagName('li');
+ res=res-1;
+ obj=list[res];
+
+ if (! evt) { evt = event; }
+ var mx = evt.clientX + (document.body.scrollLeft || document.documentElement.scrollLeft);
+ var my = evt.clientY + (document.body.scrollTop  || document.documentElement.scrollTop);
+
+ if(obj){
+  objPopup.innerHTML     = obj.innerHTML;        
+  objPopup.style.left    = mx + 15 + "px";
+  objPopup.style.top     = my - 25 + "px";
+  objPopup.style.zIndex   = 9999;
+  objPopup.style.display  = 'block';
+ }
+}
+
+function popoff() {
+ var objPopup = document.getElementById('mypopup');
+ objPopup.style.display = 'none';
+}
+
+$(function(){
+rep();
+});
+//-->
+</script>
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=1190">
+<meta property="og:type" content="blogやarticle" />
+<meta property="og:title" content="ブログや記事のタイトル" />
+<meta property="og:description" content="ブログや記事の説明" />
+<meta property="og:url" content="ブログや記事のURL" />
+<meta property="og:image" content="プロフィールアイコン（管理画面で設定）" />
+<meta property="og:site_name" content="livedoor Blog" />
+<meta property="og:locale" content="ja_JP" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@Poro_soku" />
+<$HeadSectionCommon$>
+<meta name="description" content="<$BlogDescription ESCAPE$>" />
+<$OGP$>
+<link rel="alternate" media="handheld" type="application/xhtml+xml" href="<$BlogMobileUrl$>" />
+<IfFoafUrl><link rel="meta" type="application/rdf+xml" title="FOAF" href="<$FoafUrl$>" /></IfFoafUrl>
+<title><$BlogTitle ESCAPE$></title>
+<!--[if lt IE 9]>
+<script src="<$PartsBaseUrl$>/js/html5.js"></script>
+<![endif]-->
+<script src="<$PartsBaseUrl$>/js/usr/import.js"></script>
+<script>
+$(function(){
+ if($('.header-inner01').children('#blog-header-image').length) {
+  $(window).bind('load', function() {
+   var title1 = $('#blog-header-image').height();
+   var title2 = $('.header-menu').height();
+   var headerHeight = title1-title2-15;
+   $("hgroup").css("height", headerHeight);
+  });
+ }
+});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-76382903-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head> 
+<body class="default_2012 page-index layout-2col sidebar-right<IfBlogBackgroundImageUrl> show-bg-image" style="background-image:url(<$BlogBackgroundImageUrl$>);</IfBlogBackgroundImageUrl>">
+<?php include_once("analyticstracking.php") ?>
+
+<$BlogHeader$><!-- 共通ヘッダー表示 -->
+
+<!-- ブログタイトル はじまり-->
+<header id="blog-header">
+    <div id="blog-header01">
+        <div class="header-inner01<IfBlogHeaderImageUrl> show-image<IfBlogHeaderHideText> hide-text</IfBlogHeaderHideText></IfBlogHeaderImageUrl>">
+
+            <hgroup>
+                <!--ブログタイトル　はじまり-->
+                <h1 id="blog-title"><a href="<$BlogUrl$>"><$BlogTitle ESCAPE$></a></h1>
+                <!--ブログタイトル　ここまで-->
+                <!--ブログ説明　はじまり-->
+                <h2 id="blog-description"><$BlogDescription$></h2>
+                <!--ブログ説明　ここまで-->
+            </hgroup>
+
+            <IfBlogHeaderImageUrl><IfBlogHeaderHideText><a href="<$BlogUrl$>"></IfBlogHeaderHideText><img src="<$BlogHeaderImageUrl$>" id="blog-header-image" /><IfBlogHeaderHideText></a></IfBlogHeaderHideText></IfBlogHeaderImageUrl>
+
+            <div id="blog-header02">
+                <div class="header-inner02">
+                    <ul class="header-menu">
+                        <li><a href="<$BlogUrl$>">ホーム</a></li><!--メニューを入れてください-->
+<li><a href="http://porosoku.blog.jp/archives/cat_375228.html">PBE</a></li><!--メニューを入れてください-->
+                      <li><a href="http://blog.livedoor.jp/porolol/archives/cat_75284.html">動画</a></li>
+<li><a href="http://porosoku.blog.jp/archives/23792337.html">頂き物</a></li>
+<li><a href="http://porosoku.blog.jp/archives/23680150.html">連絡先(ネタ投稿)</a></li>
+<!--メニューを入れてください-->
+ 　　　　　　　　　
+                    </ul>
+                    <ul class="header-sarch">
+                        <li><a href="https://twitter.com/Poro_soku"><img src="https://parts.blog.livedoor.jp/img/usr/ver06_km_matomegray_3c/icon_twitter.png" alt="Twitter" /></a></li><!--Twitter-->
+                        <li><a href="<$RSSUrl$>"><img src="https://parts.blog.livedoor.jp/img/usr/ver06_km_matomegray_3c/icon_rss.png" alt="RSS" /></a></li><!--RSS-->
+                        <li>
+                        <form action="<$BlogUrl$>search" method="GET" style="padding:0;margin:0px;">
+                        <input type="TEXT" name="q" class="sf">
+                        <input type="SUBMIT" value="検索" class="sfbtn">
+                        </form>
+                        </li><!--検索窓-->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+<!-- /ブログタイトル ここまで-->
+
+
+<!-- コンテンツエリア はじまり-->
+<div id="wrapper">
+
+    <!-- コンテンツ全体 はじまり-->
+    <div id="container">
+
+
+        <!-- 相互RSS はじまり-->
+        <!-- ▼ 相互RSSコードここから ▼ -->
+<div style="width:1165px;height:130px;overflow:auto;background-color:#FFFFFF;scrollbar-arrow-color:#000;scrollbar-base-color:#ccc;border-top-style:groove;border-left-style:outset;border-bottom-style:groove">
+<div class="blogroll-wrapper">
+<div class="blogroll-column">
+<script type="text/javascript">
+<!--
+    var blogroll_channel_id = 214425;
+// -->
+</script>
+<script type="text/javascript" charset="utf-8" src="https://blogroll.livedoor.net/js/blogroll.js"></script>
+</div>
+<div class="blogroll-column">
+<script type="text/javascript">
+<!--
+    var blogroll_channel_id = 214462;
+// -->
+</script>
+<script type="text/javascript" charset="utf-8" src="https://blogroll.livedoor.net/js/blogroll.js"></script>
+</div>
+<!-- /.blogroll-wrapper --></div>
+</div>
+<!-- ▲ 相互RSSコードここまで ▲ -->
+        <!-- 相互RSS ここまで-->
+
+
+        <!-- コンテンツの箱の中　真ん中728px はじまり-->
+        <div class="main-container">
+            <div class="main-column-inner">
+
+
+                 <!-- 画像付きRTorコメントリスト はじまり-->
+                <div class="listWithImage">
+                    <SetVar popularArticlesListWithImageCount>3</SetVar><!-- 件数 -->
+                    <SetVar popularArticlesListWithImageImageWidth>233</SetVar>
+                    <SetVar popularArticlesListWithImageImageHeight>180</SetVar>
+                    <SetVar popularArticlesListWithImageComment>0</SetVar><!-- RT(0)かコメント(1) -->
+                    <SetVar popularArticlesListWithImageRangeType>month0</SetVar><!-- 集計範囲：今週(week0) 今月(month0) -->
+                    <SetVar popularArticlesListWithImageForegroundColor>#ffffff</SetVar><!-- 文字色 -->
+                    <SetVar popularArticlesListWithImageBackgroundColor>#000000</SetVar><!-- 背景色 -->
+                    <$PopularArticlesWithImageList$><!-- 人気記事 -->
+                </div>
+                <!-- 画像付きRTorコメントリスト  ここまで-->
+
+
+                 <!-- 広告コード　728px X 90px はじまり-->
+<h6>スポンサーリンク</h6>                 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- PC用ヘッダー -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:720px;height:90px"
+     data-ad-client="ca-pub-1734000920269755"
+     data-ad-slot="1558384029"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+                <!-- /広告コード　720px X 90px ここまで-->
+
+
+                <!-- メッセージボード -->
+                <$MessageBoard$>
+
+
+                <!-- ページ送り　上部 はじまり-->
+                <$IndexNavigator$>
+                <!-- /ページ送り　上部 ここまで-->
+
+
+                <!-- 記事の一覧の開始　はじまり -->
+                <IndexArticlesLoop><!-- トップページの記事一覧ループ -->
+                <$TrackBackAutoDiscovery$><!-- 記事のトラックバック・オートディスカバリー -->
+
+                <!-- 記事　はじまり -->
+                <article class="article<IfFirstArticle> first-article</IfFirstArticle><IfLastArticle> last-article</IfLastArticle>" itemscope itemtype="http://schema.org/BlogPosting">
+
+
+                    <!-- 記事タイトル　記事下の情報　はじまり-->
+                    <header class="article-header">
+
+                        <h1 class="article-title" itemprop="name"><a href="<$ArticlePermalink$>" itemprop="url"><$ArticleTitle ESCAPE$></a></h1><!-- 記事のタイトル -->
+
+                            <!-- 記事下の記事情報 はじまり-->
+                            <div class="article-header-inner">
+
+                                <!-- 記事情報の上の行 はじまり-->
+                                <div class="article-header-top">
+                                <p class="article-header-date"><time datetime="<$ArticleDateISO8601$>" pubdate="pubdate"><$ArticleDate$></time></p>
+                                <IfArticleCategory1>
+                                <ul class="article-header-category">
+                                    <li>
+                                        <dl><dt>カテゴリ:</dt><dd class="article-category1"><a href="<$ArticleCategory1Url$>"><$ArticleCategory1$></a></dd><IfArticleCategory2><dd class="article-category2"><a href="<$ArticleCategory2Url$>"><$ArticleCategory2$></a></dd></IfArticleCategory2></dl>
+                                    </li>
+                                </ul>
+                                </IfArticleCategory1>
+
+                                <!-- 記事の評価アイコン はじまり-->
+                                <IfArticleRating><span class="article-rating"><$ArticleRatingIcon$></span></IfArticleRating>
+                                <!-- 記事の評価アイコン ここまで-->
+
+                                </div>
+                                <!-- 記事情報の上の行 ここまで-->
+                                <!-- ソーシャルボタン　はじまり -->
+                                <ul class="article-social-btn">
+                                    <$ArticleToolBox$>
+                                </ul>
+                                 <!-- ソーシャルボタン　ここまで -->
+                            </div>
+                            <!-- 記事下の記事情報 ここまで-->
+
+                    </header>
+                    <!-- 記事タイトル　記事下の情報　ここまで-->
+
+
+                    <!-- 記事本文 はじまり-->
+                    <div class="article-body">
+                        <div class="article-body-inner">
+                        <$CommonTheme$><!-- 参加している共通テーマの表示 -->
+                        <$ArticleBody$><!-- 本文 -->
+
+                        <!-- 続きを読む はじまり-->
+                        <IfArticleBodyMore><span class="article-body-continue"><a href="<$ArticlePermalink$>#more">【<$ArticleTitle ESCAPE$>】の続きを読む</a></span></IfArticleBodyMore>
+
+
+                        <!-- 続きを読む　ここまで -->
+
+
+                        <$ArticleTagsList$><!-- タグのリスト表示セット -->
+                        </div>
+                    </div>
+                    <!-- /記事本文 ここまで-->
+
+                </article>
+                <!-- /記事 ここまで-->
+
+
+                <IfFirstArticle><h6>スポンサーリンク</h6>                 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 記事下四角横二つ -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-1734000920269755"
+     data-ad-slot="4143956828"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</script><script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 記事下四角縦二つ -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:336px;height:280px"
+     data-ad-client="ca-pub-1734000920269755"
+     data-ad-slot="4143956828"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script></IfFirstArticle>
+<!-- 広告表示 -->
+
+
+                </IndexArticlesLoop>
+                <!-- 記事の一覧の開始　ここまで -->
+
+
+                <!-- ページ送り 下部　はじまり-->
+                <$IndexNavigator$>
+                <!-- /ページ送り 下部　ここまで-->
+
+            </div><!-- /main-column-inner-->
+        </div>
+        <!-- コンテンツの箱の中　真ん中728px ここまで-->
+
+
+        <!-- コンテンツの箱の中　左側200px はじまり-->
+        <aside class="left-container">
+            <div class="left-column-inner">
+            <$PluginList_A$><!-- 「A」設定のブログパーツ表示 -->
+            </div>
+        </aside>
+        <!-- コンテンツの箱の中　左側200px ここまで-->
+
+
+        <!-- コンテンツの箱の中　右側200px はじまり-->
+        <aside class="right-container">
+            <div class="right-column-inner">
+            <$PluginList_B$><!-- 「B」設定のブログパーツ表示 -->
+            <$LDServices$><!-- LDR・RSSリンクとブログのロゴ表示 -->
+            </div>
+        </aside>
+        <!-- コンテンツの箱の中　右側200px ここまで-->
+
+        <!-- このページのトップヘ　はじまり -->
+        <p class="to-pagetop"><a href="#"><img src="https://parts.blog.livedoor.jp/img/usr/default_2012/common/to_pagetop.png" width="70" height="70" alt="このページのトップヘ" /></a></p>
+        <!-- このページのトップヘ ここまで -->
+
+    </div>
+    <!-- コンテンツ全体 ここまで-->
+
+    <!-- ブログのフッター はじまり-->
+    <footer id="blog-footer">
+   Copyright©ポロ速報 LOL-まとめ<!-- 共通フッター表示 -->
+    </footer>
+    <!-- /ブログのフッター ここまで-->
+
+</div>
+<!-- コンテンツエリア ここまで-->
+
+</body>
+</html>
